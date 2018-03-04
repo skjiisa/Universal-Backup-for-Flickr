@@ -12,6 +12,10 @@ Depends on [Flickcurl](http://librdf.org/flickcurl/) and [7zip](http://www.7-zip
 
 ## Usage
 
+### Making a backup
+
+Flickcurl must be first configured and linked to your Flickr account. Test it (ex: `flickcurl upload [filename]`) to make sure file uploading works properly.
+
 Run the script and give an argument with the path to the folder to be backed up. `output.mp4` must be in the working directory.
 
 ### Restoring backup
