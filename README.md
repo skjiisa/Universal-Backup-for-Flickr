@@ -18,9 +18,9 @@ Run the script and give an argument with the path to the folder to be backed up.
 
 There is currently no script for restoring backups. It must be done by hand. The procedure is to remove the first 1506 bytes from the mp4 files downloaded from Flickr, then extract the archive parts using 7zip. This can be done easily using `dd`. An example backup restore:
 
-  dd if=relative,path,to,file,2018-03-04_08,06.7z.001.mp4 of=NextcloudDAV,Media,Meme_Vault,2018-03-04_08,06.7z.001 iflag=skip_bytes skip=1506
-  dd if=relative,path,to,file,2018-03-04_08,06.7z.002.mp4 of=NextcloudDAV,Media,Meme_Vault,2018-03-04_08,06.7z.002 iflag=skip_bytes skip=1506
-  7za e relative,path,to,file,2018-03-04_08,06.7z.001
+    dd if=relative,path,to,file,2018-03-04_08,06.7z.001.mp4 of=NextcloudDAV,Media,Meme_Vault,2018-03-04_08,06.7z.001 iflag=skip_bytes skip=1506
+    dd if=relative,path,to,file,2018-03-04_08,06.7z.002.mp4 of=NextcloudDAV,Media,Meme_Vault,2018-03-04_08,06.7z.002 iflag=skip_bytes skip=1506
+    7za e relative,path,to,file,2018-03-04_08,06.7z.001
 
 ## Notes
 
