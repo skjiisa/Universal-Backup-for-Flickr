@@ -10,6 +10,8 @@ This script is primitive. It currently works on my machine, but likely will not 
 
 Depends on [Flickcurl](http://librdf.org/flickcurl/) and [7zip](http://www.7-zip.org/).
 
+These are available on pacman for Arch as `flickcurl` and `p7zip` repectively.
+
 ## Usage
 
 ### Making a backup
