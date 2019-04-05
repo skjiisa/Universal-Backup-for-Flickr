@@ -8,13 +8,13 @@ if [ ! -d "$1" ]; then
 	exit 1
 fi
 
-eval 7za a "$dirname$datetime.7z" "$1" -p -mhe -mx=0 -v1000m
+eval tar cf - $1 | 7za a -si "$dirname$datetime.tar.7z" -p -mhe -mx=0 -v1000m
 
 if [ $? -ne 0 ]; then
 	exit 1
 fi
 
-for i in $dirname$datetime.7z.00*; do
+for i in $dirname$datetime.tar.7z.00*; do
 	echo "Uploading $i"
 	cp output.mp4 $i.mp4
 	dd if=$i of=$i.mp4 bs=512 seek=3

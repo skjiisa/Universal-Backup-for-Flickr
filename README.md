@@ -22,11 +22,12 @@ Run the script and give an argument with the path to the folder to be backed up.
 
 ### Restoring backup
 
-There is currently no script for restoring backups. It must be done by hand. The procedure is to remove the first 1536 bytes (three 512-byte blocks) from the mp4 files downloaded from Flickr, then extract the archive parts using 7zip. This can be done easily using `dd`. An example backup restore:
+There is currently no script for restoring backups. It must be done by hand. The procedure is to remove the first 1536 bytes (three 512-byte blocks) from the mp4 files downloaded from Flickr, then extract the encrypted archive parts using 7-Zip, and finally unpackaging the tarball. This can be done easily using `dd`. An example backup restore:
 
-    dd if=relative,path,to,file,2018-03-04_08,06.7z.001.mp4 of=relative,path,to,file,2018-03-04_08,06.7z.001 skip=3
-    dd if=relative,path,to,file,2018-03-04_08,06.7z.002.mp4 of=relative,path,to,file,2018-03-04_08,06.7z.002 skip=3
-    7za e relative,path,to,file,2018-03-04_08,06.7z.001
+    dd if=relative,path,to,file,2018-03-04_08,06.tar.7z.001.mp4 of=relative,path,to,file,2018-03-04_08,06.tar.7z.001 skip=3
+    dd if=relative,path,to,file,2018-03-04_08,06.tar.7z.002.mp4 of=relative,path,to,file,2018-03-04_08,06.tar.7z.002 skip=3
+    7za x relative,path,to,file,2018-03-04_08,06.tar.7z.001
+    tar xf relative,path,to,file,2018-03-04_08,06.tar
 
 ## Notes
 
