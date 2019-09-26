@@ -2,9 +2,9 @@
 
 Script for backing up ANY files to Flickr
 
-Flickr gives each user 1000 file uploads, which can be images or videos. The maximum file size for a video is 1GB, allowing for up to 1TB of free file hosting. This script encrypts files, then masks them as videos to upload to Flickr to take advantage of the maximum possible 1 TB of storage as universal file backup. Files or directories larger than 1GB will be split into 1GB chunks before upload and can be combined and decrypted back to the original.
+Flickr gives each user 1000 file uploads, which can be images or videos. The maximum file size for a video is 1GB, allowing for up to 1TB of free file hosting. This script encrypts files, then masks them as videos to upload to Flickr to take advantage of the maximum possible 1TB of storage as universal file backup. Files or directories larger than 1GB will be split into 1GB chunks before upload and can be combined and decrypted back to the original.
 
-This script is primitive. It currently works on my machine, but likely will not work on other systems and workflows.
+This script is primitive. It currently works on my machine, but may or may not work as intended on other systems.
 
 ## Usage
 
