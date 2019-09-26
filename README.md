@@ -27,7 +27,9 @@ Depends on
 1. Clone the repository or download it as a zip and extract.
 1. Set the script permissions to be able to be run:
 
-`sudo chmod +x flickrbackup.sh`
+```
+    sudo chmod +x flickrbackup.sh
+```
 
 ### Making a backup
 
