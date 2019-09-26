@@ -6,13 +6,28 @@ Flickr gives each user 1 TB of storage for uploading pictures and video. This sc
 
 This script is primitive. It currently works on my machine, but likely will not work on other systems and workflows.
 
-## Dependencies
-
-Depends on [Flickcurl](http://librdf.org/flickcurl/) and [7-Zip](http://www.7-zip.org/).
-
-These are available on pacman for Arch as `flickcurl` and `p7zip` repectively.
-
 ## Usage
+
+### Dependencies
+
+Depends on
+
+* tar
+    * macOS: _included_
+    * Arch: `sudo pacman -S tar`
+* [Flickcurl](http://librdf.org/flickcurl/) 
+    * macOS: `brew install flickcurl`
+    * Arch: `sudo pacman -S flickcurl`
+* [7-Zip](http://www.7-zip.org/)
+    * macOS: `brew install p7zip`
+    * Arch: `sudo pacman -S p7zip`
+
+### Install
+
+1. Clone the repository or download it as a zip and extract.
+1. Set the script permissions to be able to be run:
+
+`sudo chmod +x flickrbackup.sh`
 
 ### Making a backup
 
@@ -20,7 +35,7 @@ Flickcurl must be first configured and linked to your Flickr account. Test it (e
 
 Run the script and give an argument with the path to the folder to be backed up. `output.mp4` must be in the working directory.
 
-### Restoring backup
+### Restoring a backup
 
 There is currently no script for restoring backups. It must be done by hand. The procedure is to remove the first 1536 bytes (three 512-byte blocks) from the mp4 files downloaded from Flickr, then extract the encrypted archive parts using 7-Zip, and finally unpackaging the tarball. This can be done easily using `dd`. An example backup restore:
 
